@@ -15,8 +15,7 @@ edition = "2018"
 readme = "README.md"
 
 [features]
-default = []
-compile-only = []
+no_runtime_detection = []
 
 [target.aarch64-apple-darwin.dependencies]
 libc = "0.2.98"
