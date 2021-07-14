@@ -17,13 +17,13 @@ macro_rules! __unless_target_features {
             #[cfg(
                 all(
                     not(target_env = "sgx"),
-                    not(feature = "compile-only")
+                    not(feature = "compile_only")
                 )
             )]
             $body
 
             // CPUID is not available on SGX targets
-            #[cfg(any(target_env = "sgx", feature = "compile-only"))]
+            #[cfg(any(target_env = "sgx", feature = "compile_only"))]
             false
         }
 

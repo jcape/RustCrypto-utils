@@ -16,7 +16,7 @@ readme = "README.md"
 
 [features]
 default = []
-compile-only = []
+compile_only = []
 
 [target.aarch64-apple-darwin.dependencies]
 libc = "0.2.98"
