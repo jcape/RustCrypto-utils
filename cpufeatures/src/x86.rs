@@ -12,13 +12,7 @@
 #[doc(hidden)]
 macro_rules! __unless_target_features {
     ($($tf:tt),+ => $body:expr ) => {{
-        #[cfg(not(all($(target_feature=$tf,)*)))]
-        {
-            false
-        }
-
-        #[cfg(all($(target_feature=$tf,)*))]
-        true
+        cfg!((all($(target_feature=$tf,)*)))
     }};
 }
 
